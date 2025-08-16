@@ -1,0 +1,145 @@
+
+.ant-layout-header {
+  padding: 0 24px !important;
+  height: auto !important;
+  line-height: normal !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+.ant-form-inline .ant-form-item {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+
+.app-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: titleGlow 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+.brand-icon {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+.modern-header {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ant-layout-header {
+    padding: 0 16px !important;
+  }
+  
+  .repo-form-container {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .repo-form-input {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+  
+  .app-title {
+    font-size: 22px !important;
+  }
+  
+  .brand-icon {
+    display: none;
+  }
+}
+
+
+.ant-layout-content {
+  overflow: hidden;
+}
+
+
+.ant-tabs-content-holder {
+  height: 100%;
+}
+
+.ant-tabs-tabpane {
+  height: 100%;
+}
+
+
+.dependency-graph-container {
+  height: calc(100vh - 200px) !important;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+
+.app-header-content {
+  padding: 16px 0;
+}
+
+
+.repo-form {
+  margin-bottom: 0;
+}
+
+.repo-form .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.modern-card {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f2f5 !important;
+  transition: all 0.3s ease !important;
+}
+
+.modern-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px) !important;
+}

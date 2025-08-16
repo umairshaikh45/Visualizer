@@ -1,0 +1,156 @@
+
+.dependency-graph {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.dependency-graph .nodes circle {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dependency-graph .nodes circle:hover {
+  stroke-width: 3px;
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.dependency-graph .nodes circle.selected {
+  stroke-width: 4px;
+  filter: brightness(1.2) drop-shadow(0px 0px 8px rgba(255, 71, 87, 0.6));
+  animation: selectedPulse 2s ease-in-out infinite;
+}
+
+.dependency-graph .nodes circle.connected {
+  stroke-width: 3px;
+  filter: brightness(1.1) drop-shadow(0px 0px 6px rgba(55, 66, 250, 0.5));
+}
+
+.dependency-graph .links line {
+  transition: all 0.3s ease;
+}
+
+.dependency-graph .links line.highlighted {
+  filter: drop-shadow(0px 0px 4px rgba(255, 107, 122, 0.8));
+  animation: linkPulse 1.5s ease-in-out infinite;
+}
+
+.dependency-graph .labels text {
+  pointer-events: none;
+  user-select: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+
+@keyframes selectedPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes linkPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+
+.dependency-graph .nodes circle.clickable {
+  cursor: pointer;
+}
+
+.dependency-graph .nodes circle.clickable:active {
+  transform: scale(0.95);
+}
+
+.graph-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+.graph-tooltip strong {
+  color: #61dafb;
+}
+
+
+.legend {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.legend rect {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+.control-button rect {
+  transition: all 0.2s ease;
+}
+
+.control-button:hover rect {
+  filter: brightness(0.95);
+}
+
+/* Loading animations */
+.loading-indicator {
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.node-group-0 { stroke: #1f77b4; }
+.node-group-1 { stroke: #ff7f0e; }
+.node-group-2 { stroke: #2ca02c; }
+.node-group-3 { stroke: #d62728; }
+.node-group-4 { stroke: #9467bd; }
+.node-group-5 { stroke: #8c564b; }
+.node-group-6 { stroke: #e377c2; }
+.node-group-7 { stroke: #7f7f7f; }
+.node-group-8 { stroke: #bcbd22; }
+.node-group-9 { stroke: #17becf; }
+
+
+@media (max-width: 768px) {
+  .dependency-graph .labels text {
+    font-size: 10px;
+  }
+  
+  .graph-tooltip {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+
+.dependency-graph svg {
+  shape-rendering: optimizeSpeed;
+  text-rendering: optimizeSpeed;
+}
+
+.dependency-graph .links {
+  shape-rendering: crispEdges;
+}
