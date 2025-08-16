@@ -159,7 +159,7 @@ Module is maintained by [Umair Shaikh](https://github.com/umairshaikh45/).
 
 ## License: Apache 2.0
 
-Apache 2 Licensed. See [LICENSE](https://github.com/umairshaikh45/Visualizer/LICENSE) for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/umairshaikh45/Visualizer/blob/main/LICENSE) for full details.
 
 ## 👥 Authors
 
